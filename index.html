@@ -1,9 +1,15 @@
 <html>
 <body>
-<input type="text" id="applepie" />
+<input id="applepie" type="password"/>
 <button id="btn">cook</button>
+<button id="cpbtn" data-clipboard-target="#eat">dish</button>
 <h1 id="eat" />
+
+
+<script src="./clipboard/dist/clipboard.min.js""></script>
 <script>
+new Clipboard("#cpbtn")
+
 document.querySelector("#btn").onclick = function(){
   const p = btoa(document.querySelector("#applepie").value)
 
@@ -15,6 +21,7 @@ document.querySelector("#btn").onclick = function(){
  
   document.querySelector("#eat").innerHTML = b22
 }
+
 </script>
 </body>
 </html>
