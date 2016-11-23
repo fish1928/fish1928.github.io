@@ -1,1 +1,17 @@
-hello world!
+<html>
+<body>
+<input type="text" id="applepie" />
+<button id="btn">cook</button>
+
+<script>
+document.querySelector("#btn").onclick = function(){
+  var p = document.querySelector("#applepie").value
+  b1 = btoa(p)
+  b11 = b1.substring(b1.length - 12, b1.length)
+  b2 = btoa(b11)
+  b21 = b2.substring(0, 12)
+  alert(b21)
+}
+</script>
+</body>
+</html>
