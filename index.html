@@ -2,7 +2,7 @@
 <body>
 <input type="text" id="applepie" />
 <button id="btn">cook</button>
-
+<h1 id="eat" />
 <script>
 document.querySelector("#btn").onclick = function(){
   var p = document.querySelector("#applepie").value
@@ -10,7 +10,7 @@ document.querySelector("#btn").onclick = function(){
   b11 = b1.substring(b1.length - 12, b1.length)
   b2 = btoa(b11)
   b21 = b2.substring(0, 12)
-  alert(b21)
+  document.querySelector("#eat").innerHTML = b21
 }
 </script>
 </body>
