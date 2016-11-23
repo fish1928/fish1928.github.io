@@ -5,12 +5,15 @@
 <h1 id="eat" />
 <script>
 document.querySelector("#btn").onclick = function(){
-  var p = document.querySelector("#applepie").value
-  b1 = btoa(p)
-  b11 = b1.substring(b1.length - 12, b1.length)
-  b2 = btoa(b11)
-  b21 = b2.substring(0, 12)
-  document.querySelector("#eat").innerHTML = b21
+  const p = btoa(document.querySelector("#applepie").value)
+
+  const b1 = btoa(p)
+  const b11 = b1.split('').filter((x,i)=>i%2===0).join('')
+
+  const b2 = btoa(b11)
+  const b22 = b2.split('').filter((x,i)=>i%2===1).join('')
+ 
+  document.querySelector("#eat").innerHTML = b22
 }
 </script>
 </body>
