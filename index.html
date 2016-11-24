@@ -9,15 +9,17 @@
 new Clipboard("#eat")
 
 document.querySelector("#btn").onclick = function(){
-  const p = btoa(document.querySelector("#applepie").value)
+  const a = btoa(document.querySelector("#applepie").value.split('').sort().join(''))
+  
+  const b1 = a.split('').filter((x,i)=>i%2===0).join('')
+  const b11 = btoa(b1)
 
-  const b1 = btoa(p)
-  const b11 = b1.split('').filter((x,i)=>i%2===0).join('')
+  const b2 = b11.split('').filter((x,i)=>i%2===1).join('')
+  const b22 = btoa(b2)
 
-  const b2 = btoa(b11)
-  const b22 = b2.split('').filter((x,i)=>i%2===1).join('')
- 
-  document.querySelector("#eat").innerHTML = b22
+  c = b22.substring(0,12)
+
+  document.querySelector("#eat").innerHTML = c
 }
 </script>
 </body>
